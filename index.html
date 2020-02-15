@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    body {
+        background: #000;
+    }
+
+    .content {
+        margin: 100px;
+    }
+
+    .plates {
+        position: relative;
+        transform-style: preserve-3d;
+    }
+
+    .plates:hover .first:nth-child(1) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(0px);
+    }
+
+    .plates:hover .second:nth-child(1) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(10px);
+    }
+
+    .plates:hover .second:nth-child(2) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(20px);
+    }
+
+    .plates:hover .second:nth-child(3) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(30px);
+    }
+
+    .plates:hover .second:nth-child(4) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(40px);
+    }
+
+    .plates:hover .second:nth-child(5) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(50px);
+    }
+
+    .plates:hover .second:nth-child(6) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(60px);
+    }
+
+    .plates:hover .third:nth-child(1) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(10px);
+    }
+
+    .plates:hover .third:nth-child(2) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(20px);
+    }
+
+    .plates:hover .third:nth-child(3) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(30px);
+    }
+
+    .plates:hover .third:nth-child(4) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(40px);
+    }
+
+    .plates:hover .third:nth-child(5) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(50px);
+    }
+
+    .plates:hover .third:nth-child(6) {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(60px);
+    }
+
+    .plate {
+        position: absolute;
+        transition: .5s ease transform;
+    }
+
+    .second:last-child {
+        filter: brightness(120%);
+    }
+    .third:last-child {
+        filter: brightness(120%);
+    }
+</style>
+<div class="content">
+<div class="plates">
+    <div>
+        <img src="./images/img.jpg" class="plate first" />
+    </div>
+    <div>
+        <img src="./images/img-2.png" class="plate second" />
+        <img src="./images/img-2.png" class="plate second" />
+        <img src="./images/img-2.png" class="plate second" />
+        <img src="./images/img-2.png" class="plate second" />
+        <img src="./images/img-2.png" class="plate second" />
+        <img src="./images/img-2.png" class="plate second" />
+    </div>
+    <div>
+        <img src="./images/img-3.png" class="plate third" />
+        <img src="./images/img-3.png" class="plate third" />
+        <img src="./images/img-3.png" class="plate third" />
+        <img src="./images/img-3.png" class="plate third" />
+        <img src="./images/img-3.png" class="plate third" />
+        <img src="./images/img-3.png" class="plate third" />
+    </div>
+</div>
+</div>
+</body>
+</html>
