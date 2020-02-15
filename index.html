@@ -14,97 +14,84 @@
         margin: 100px;
     }
 
-    .plates {
-        position: relative;
-        transform-style: preserve-3d;
-    }
-
-    .plates:hover .first:nth-child(1) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(0px);
-    }
-
-    .plates:hover .second:nth-child(1) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(10px);
-    }
-
-    .plates:hover .second:nth-child(2) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(20px);
-    }
-
-    .plates:hover .second:nth-child(3) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(30px);
-    }
-
-    .plates:hover .second:nth-child(4) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(40px);
-    }
-
-    .plates:hover .second:nth-child(5) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(50px);
-    }
-
-    .plates:hover .second:nth-child(6) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(60px);
-    }
-
-    .plates:hover .third:nth-child(1) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(10px);
-    }
-
-    .plates:hover .third:nth-child(2) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(20px);
-    }
-
-    .plates:hover .third:nth-child(3) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(30px);
-    }
-
-    .plates:hover .third:nth-child(4) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(40px);
-    }
-
-    .plates:hover .third:nth-child(5) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(50px);
-    }
-
-    .plates:hover .third:nth-child(6) {
-        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg) translateZ(60px);
-    }
-
     .plate {
         position: absolute;
-        transition: .5s ease transform;
+        top: 0;
+        left: 0;
+        transition: .5s ease transform, 1s ease filter;
     }
 
-    .second:last-child {
-        filter: brightness(120%);
+    .bg-image {
+        position: static;
     }
-    .third:last-child {
-        filter: brightness(120%);
+
+    .plates {
+        display: inline-block;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: .5s ease transform;
+        transform-origin: 50% 50%;
+    }
+
+    .plates:hover .inverse {
+        filter: invert();
+    }
+
+    .plates:hover {
+        transform: rotateX(-7deg) rotateY(7deg) rotateZ(4deg);
+    }
+
+    .plates:hover .plate:nth-child(1) {
+        transform: translateZ(0px);
+    }
+
+    .plates:hover .plate:nth-child(1) {
+        transform: translateZ(10px);
+    }
+
+    .plates:hover .plate:nth-child(2) {
+        transform: translateZ(20px);
+    }
+
+    .plates:hover .plate:nth-child(3) {
+        transform: translateZ(30px);
+    }
+
+    .plates:hover .plate:nth-child(4) {
+        transform: translateZ(40px);
+    }
+
+    .plates:hover .plate:nth-child(5) {
+        transform: translateZ(50px);
+    }
+
+    .plates:hover .plate:nth-child(6) {
+        transform: translateZ(60px);
     }
 </style>
+
 <div class="content">
-<div class="plates">
-    <div>
-        <img src="./images/img.jpg" class="plate first" />
+    <div class="plates">
+        <div>
+            <img src="./images/img.jpg" class="plate bg-image" />
+        </div>
+        <div>
+            <img src="./images/img-2.png" class="plate" />
+            <img src="./images/img-2.png" class="plate" />
+            <img src="./images/img-2.png" class="plate" />
+            <img src="./images/img-2.png" class="plate" />
+            <img src="./images/img-2.png" class="plate" />
+            <img src="./images/img-2.png" class="plate" />
+        </div>
+        <div>
+            <img src="./images/img-3.png" class="plate" />
+            <img src="./images/img-3.png" class="plate" />
+            <img src="./images/img-3.png" class="plate" />
+            <img src="./images/img-3.png" class="plate" />
+            <img src="./images/img-3.png" class="plate" />
+            <img src="./images/img-3.png" class="plate inverse" />
+        </div>
     </div>
-    <div>
-        <img src="./images/img-2.png" class="plate second" />
-        <img src="./images/img-2.png" class="plate second" />
-        <img src="./images/img-2.png" class="plate second" />
-        <img src="./images/img-2.png" class="plate second" />
-        <img src="./images/img-2.png" class="plate second" />
-        <img src="./images/img-2.png" class="plate second" />
-    </div>
-    <div>
-        <img src="./images/img-3.png" class="plate third" />
-        <img src="./images/img-3.png" class="plate third" />
-        <img src="./images/img-3.png" class="plate third" />
-        <img src="./images/img-3.png" class="plate third" />
-        <img src="./images/img-3.png" class="plate third" />
-        <img src="./images/img-3.png" class="plate third" />
-    </div>
-</div>
 </div>
 </body>
 </html>
